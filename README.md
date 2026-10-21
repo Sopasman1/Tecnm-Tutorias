@@ -50,6 +50,7 @@ npx skills add https://github.com/dietrichgebert/ponytail --skill ponytail
 
 El proyecto se rige por los siguientes estándares arquitectónicos:
 
+- **[Estructura del proyecto](./ESTRUCTURA_PROYECTO.md):** Diagrama de carpetas y archivos del repositorio.
 - **[Estándar de Autenticación y Sesiones](./AUTH.md):** Especificación de seguridad, cookies `HttpOnly`, ciclo de vida del JWT y soporte para login local y federado (Microsoft Entra / Google).
 - **[Arquitectura Backend (.NET 10)](./BACKEND_ARCHITECTURE.md):** Estructura y lineamientos para la API REST, persistencia con EF Core y PostgreSQL, y módulos de negocio con especificaciones locales.
 - **[Arquitectura Frontend (Vue 3 + TypeScript)](./FRONTEND_ARCHITECTURE.md):** Estructura y lineamientos para la aplicación SPA con Vite, rutas modulares descentralizadas, componentes reutilizables y especificaciones por slice.

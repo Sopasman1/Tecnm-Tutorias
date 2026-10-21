@@ -18,7 +18,8 @@ No se implementarán OAuth/OIDC, refresh tokens, registro, recuperación de cont
 
 ```text
 .
-├── database.sql
+├── database/
+│   └── database.sql
 ├── specs/
 │   └── auth.spec.md                 # Contrato compartido y fuente de verdad
 ├── backend/
@@ -103,7 +104,7 @@ Carga prevista:
 
 ```bash
 sudo -u postgres createdb tecnm_template
-sudo -u postgres psql -d tecnm_template -f database.sql
+sudo -u postgres psql -d tecnm_template -f database/database.sql
 ```
 
 Antes de crear la base se comprobará si ya existe. Si existe, solo se aplicará el SQL idempotente. La conexión de la API se pasará mediante `ConnectionStrings__DefaultConnection`; no se guardará una contraseña real en Git.
@@ -241,7 +242,7 @@ También se comprobarán los usuarios directamente en PostgreSQL y el flujo visu
 
 ## 7. Decisiones deliberadamente mínimas
 
-- SQL inicial en vez de migraciones EF para esta prueba, porque `database.sql` es requisito explícito.
+- SQL inicial en vez de migraciones EF para esta prueba, porque `database/database.sql` es requisito explícito.
 - Axios solo porque se pidió interceptor; `fetch` no ofrece interceptores nativos.
 - Sin store global: dos vistas no justifican Pinia.
 - Sin capas Repository o interfaces de una sola implementación.
